@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2606866DF9D1C91E972D9011 /* libPods-PeerReview03.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CAA4DDD3B1FECB5C1D03D0 /* libPods-PeerReview03.a */; };
 		DE2499571E446686003D8879 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2499561E446686003D8879 /* main.m */; };
 		DE24995A1E446686003D8879 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2499591E446686003D8879 /* AppDelegate.m */; };
 		DE24995D1E446686003D8879 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE24995C1E446686003D8879 /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01CAA4DDD3B1FECB5C1D03D0 /* libPods-PeerReview03.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PeerReview03.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B949C1E4C1FF045CA51F31B /* Pods-PeerReview03.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeerReview03.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeerReview03/Pods-PeerReview03.release.xcconfig"; sourceTree = "<group>"; };
+		B965D017F8EE8FA387851236 /* Pods-PeerReview03.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeerReview03.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeerReview03/Pods-PeerReview03.debug.xcconfig"; sourceTree = "<group>"; };
 		DE2499521E446686003D8879 /* PeerReview03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeerReview03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2499561E446686003D8879 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DE2499581E446686003D8879 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2606866DF9D1C91E972D9011 /* libPods-PeerReview03.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		676145DDC0282002992F5542 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01CAA4DDD3B1FECB5C1D03D0 /* libPods-PeerReview03.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D73FAE0E8DB6EB44F37123E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B965D017F8EE8FA387851236 /* Pods-PeerReview03.debug.xcconfig */,
+				8B949C1E4C1FF045CA51F31B /* Pods-PeerReview03.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DE2499491E446686003D8879 = {
 			isa = PBXGroup;
 			children = (
 				DE2499541E446686003D8879 /* PeerReview03 */,
 				DE2499531E446686003D8879 /* Products */,
+				D73FAE0E8DB6EB44F37123E8 /* Pods */,
+				676145DDC0282002992F5542 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE2499691E446686003D8879 /* Build configuration list for PBXNativeTarget "PeerReview03" */;
 			buildPhases = (
+				12165FDD63E0212113717A67 /* [CP] Check Pods Manifest.lock */,
 				DE24994E1E446686003D8879 /* Sources */,
 				DE24994F1E446686003D8879 /* Frameworks */,
 				DE2499501E446686003D8879 /* Resources */,
+				9B8E82BDBE5BDC8FF1A01ECB /* [CP] Embed Pods Frameworks */,
+				195769E373278F8B30C96E07 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12165FDD63E0212113717A67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		195769E373278F8B30C96E07 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeerReview03/Pods-PeerReview03-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B8E82BDBE5BDC8FF1A01ECB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeerReview03/Pods-PeerReview03-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DE24994E1E446686003D8879 /* Sources */ = {
@@ -270,6 +345,7 @@
 		};
 		DE24996A1E446686003D8879 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B965D017F8EE8FA387851236 /* Pods-PeerReview03.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PeerReview03/Info.plist;
@@ -281,6 +357,7 @@
 		};
 		DE24996B1E446686003D8879 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B949C1E4C1FF045CA51F31B /* Pods-PeerReview03.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PeerReview03/Info.plist;
@@ -309,6 +386,7 @@
 				DE24996B1E446686003D8879 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
